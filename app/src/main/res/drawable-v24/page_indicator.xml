@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/active"
+        android:drawable="@drawable/ic_tab_active"
+        android:state_enabled="true"/>
+
+    <item
+        android:id="@+id/inactive"
+        android:drawable="@drawable/ic_tab_inactive"/>
+
+    <transition
+            android:drawable="@drawable/page_indicator_inactive_active"
+            android:fromId="@id/inactive"
+            android:toId="@id/active"/>
+
+    <transition
+            android:drawable="@drawable/page_indicator_active_inactive"
+            android:fromId="@id/active"
+            android:toId="@id/inactive"/>
+
+</animated-selector>

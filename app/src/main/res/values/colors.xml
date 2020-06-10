@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#211A54</color>
+    <color name="colorPrimaryDark">#1C1648</color>
+    <color name="colorPrimaryDarker">#191440</color>
+    <color name="colorPrimaryLight">#676385</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorFloatingButton">#8BC34A</color>
+    <color name="colorTabActive">#33A1FF</color>
+    <color name="colorTabInactive">#C7C7C7</color>
+    <color name="colorSemiWhite">#E7E7E7</color>
+</resources>
+

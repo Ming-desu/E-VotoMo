@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context=".fragments.IntroSetupAccountFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="32dp">
+
+        <TextView
+                android:id="@+id/text_view_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="We are almost done setting up the app."
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textColor="#89000000"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+                android:id="@+id/text_view_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Let us first create an admin account for the app."
+                android:textAppearance="?attr/textAppearanceCaption"
+                app:layout_constraintTop_toBottomOf="@id/text_view_header"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+                android:id="@+id/text_view_personal_information"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Personal Information"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                app:layout_constraintTop_toBottomOf="@id/text_view_description"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_firstname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:boxBackgroundColor="@color/colorSemiWhite"
+                app:layout_constraintTop_toBottomOf="@id/text_view_personal_information">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_text_firstname"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="First name"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_lastname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:boxBackgroundColor="@color/colorSemiWhite"
+                app:layout_constraintTop_toBottomOf="@id/text_input_firstname">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_text_lastname"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Last name"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+                android:id="@+id/text_view_login_credentials"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Login Credentials"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                app:layout_constraintTop_toBottomOf="@id/text_input_lastname"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:startIconDrawable="@drawable/ic_mail_outline_black_24dp"
+                app:boxBackgroundColor="@color/colorSemiWhite"
+                app:layout_constraintTop_toBottomOf="@id/text_view_login_credentials">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_text_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Username"
+                    android:singleLine="true"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:endIconMode="password_toggle"
+                app:startIconDrawable="@drawable/ic_fingerprint_black_24dp"
+                app:boxBackgroundColor="@color/colorSemiWhite"
+                app:layout_constraintTop_toBottomOf="@id/text_input_username">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_text_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Password"
+                    android:singleLine="true"
+                    android:inputType="textPassword"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

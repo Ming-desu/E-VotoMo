@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.IntroActivity">
+
+    <LinearLayout
+            android:id="@+id/logo_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/viewpager"
+            app:layout_constraintVertical_weight="2">
+
+        <com.google.android.material.card.MaterialCardView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
+
+            <TextView
+                    android:id="@+id/text_view_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/colorWhite"
+                    android:text="EV"
+                    android:textAppearance="?attr/textAppearanceHeadline2"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to E-Voto Mo!"
+            android:textAppearance="?attr/textAppearanceHeadline4"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="@id/logo_container"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.qqdota.evotomo.utils.NonSwipeableViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            app:layout_constraintTop_toBottomOf="@id/logo_container"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_weight="4"/>
+
+    <com.qqdota.evotomo.utils.PageIndicator
+            android:id="@+id/page_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/logo_container"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.9"
+            app:pageCount="3"
+            app:currentPage="1"/>
+
+    <Button
+            android:id="@+id/button_previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:enabled="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/page_indicator"
+            app:layout_constraintTop_toTopOf="@id/page_indicator"
+            app:layout_constraintBottom_toBottomOf="@id/page_indicator"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+    <Button
+            android:id="@+id/button_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/page_indicator"
+            app:layout_constraintTop_toTopOf="@id/page_indicator"
+            app:layout_constraintBottom_toBottomOf="@id/page_indicator"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
